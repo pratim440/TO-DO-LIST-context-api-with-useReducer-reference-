@@ -1,0 +1,49 @@
+.listItems {
+  color: black;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+.added {
+  animation: added 0.5s ease;
+}
+.deleted {
+  animation: delete 0.5s ease;
+}
+.listItems p {
+  background-color: #f5f5f5;
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.icon {
+  background-color: #f5f5f5 !important;
+  color: grey;
+}
+@keyframes added {
+  0% {
+    opacity: 0;
+    transform: translateY(-600px) rotateZ(90deg);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(-600px) rotateZ(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+}
+@keyframes delete {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(600px) rotateZ(90deg);
+  }
+}
